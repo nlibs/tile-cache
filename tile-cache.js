@@ -64,7 +64,6 @@ function ontile(q, res, token, request)
 	var rows = db.read(sql,[source, x,y,z])
 	if (rows.length > 0)
 	{
-		console.log("cached")
 		H.end(res, 200, rows[0]["data"], c.mime);
 		return;
 	}
