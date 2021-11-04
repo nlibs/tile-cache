@@ -1,0 +1,11 @@
+{
+	"name": "@nlibs/tile-cache",
+	"version": "1.0.0",
+	"license": "MIT",
+	"main": "./tile-cache.js",
+	"dependencies": {
+		"sqlite": "github:nlibs/sqlite",
+		"http-server": "github:nlibs/http-server",
+		"request": "2.88.2"
+	}
+}
