@@ -70,6 +70,14 @@ function ontile(q, res, token, request)
 	var url = c.url.replace("{x}", x).replace("{y}", y).replace("{z}", z);
 	REQ(url, {"encoding":null}, function(err, response, body)
 	{
+		if (err)
+		{
+			if (!res.is_aborted)
+				H.end(res, 404, "");
+
+			return;			
+		}
+
 		if (response.statusCode != 200)
 		{
 			if (!res.is_aborted)
